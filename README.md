@@ -49,7 +49,7 @@ A S-BERT model has been finetuned for this purpose on 6k resume-job description-
 ### What this POC does:
 * Provides a simple web interface using **Streamlit**.
 * Takes raw text from a resume and a job description as input.
-* Uses a pre-trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings.
+* Uses a trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings.
 * Calculates and displays a **semantic similarity score** that represents the true alignment between the two texts.
 
 ### What this POC does NOT include:
