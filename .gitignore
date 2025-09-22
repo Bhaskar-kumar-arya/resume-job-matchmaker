@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Streamlit
+.streamlit/
+
+resume_job_sbert_model/
+
+venv/
