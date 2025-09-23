@@ -36,7 +36,7 @@ random.shuffle(train_examples)
 # Step 7: Load a pre-trained SBERT model
 # 'all-MiniLM-L6-v2' is a good starting point - it's fast and performs well.
 # You can also use 'sentence-transformers/stsb-bert-large' as you had before.
-model = SentenceTransformer('sentence-transformers/stsb-bert-large')
+model = SentenceTransformer('Leo1212/longformer-base-4096-sentence-transformers-all-nli-stsb-quora-nq')
 
 # Step 8: Create the DataLoader
 train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=16)
@@ -47,7 +47,7 @@ train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=16)
 train_loss = losses.CosineSimilarityLoss(model=model)
 
 # Step 10: Configure training parameters
-warmup_steps = int(len(train_dataloader) * 0.1)  # 10% of train data for warm-up
+warmup_steps = int((len(train_examples) // 16) * 4 * 0.1)
 epochs = 4
 
 # Step 11: Train the model
@@ -55,12 +55,12 @@ model.fit(
     train_objectives=[(train_dataloader, train_loss)],
     epochs=epochs,
     warmup_steps=warmup_steps,
-    output_path="./resume_job_sbert_temp",  # temporary local save
+    output_path="./longorm_transformer_tmp",  # temporary local save
     use_amp=True
 )
 
 # Step 12: Save the fine-tuned model to your Google Drive
-drive_model_path = "/content/drive/MyDrive/resume_job_sbert_model"
+drive_model_path = "/content/drive/MyDrive/longform_transformer"
 model.save(drive_model_path)
 
 print("\n---------------------------------")

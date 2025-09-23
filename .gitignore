@@ -9,3 +9,9 @@ __pycache__/
 resume_job_sbert_model/
 
 venv/
+
+data/
+
+tester.py 
+
+.vscode/

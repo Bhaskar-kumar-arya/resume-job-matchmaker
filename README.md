@@ -44,13 +44,14 @@ The ultimate goal is to build an **AI-Based Smart Allocation Engine**—an intel
 This repository contains a lightweight, functional Proof of Concept. **It is not the final, full-scale application.**
 
 The purpose of this POC is to demonstrate the feasibility and power of the most critical component: **the Semantic Matching Engine**.
-A S-BERT model has been finetuned for this purpose on 6k resume-job description-eligibile dataset on google colab
+we are using an already good working S-BERT model for inference and vector embeddings generation. we will fine tune the model furthur for our needs later. 
 
 ### What this POC does:
 * Provides a simple web interface using **Streamlit**.
 * Takes raw text from a resume and a job description as input.
 * Uses a trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings.
 * Calculates and displays a **semantic similarity score** that represents the true alignment between the two texts.
+* it also has another script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top 5 resume for each job description.
 
 ### What this POC does NOT include:
 * User accounts or a database.
@@ -103,7 +104,11 @@ A S-BERT model has been finetuned for this purpose on 6k resume-job description-
 4. **Setup the model** : 
     * either use the pretrained model in `app_pretrained.py` or download the trained model from [Model](https://drive.google.com/drive/folders/1Rszkb9WspvTuhaCbLZDZfceFEXi0nUE2?usp=sharing) and run the app.py with streamlit instead.
 
-5.  **Run the Streamlit application:**
+5. **Run the Streamlit application : (use may try the sample `test.csv` file for this when app opens)** 
+    ```bash
+    streamlit run ranker.py
+    ```
+6.  **you can also manually give resume and job description to see match score individually through this script: (although the percentage isnt much relevant as compared to the ranker script .. this doesnt work as good as the ranker):**
     ```bash
     streamlit run app.py
     ```

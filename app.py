@@ -29,7 +29,8 @@ st.set_page_config(
 @st.cache_resource
 def load_model():
     """Loads the Sentence-BERT model from Hugging Face."""
-    model = SentenceTransformer('./resume_job_sbert_model')
+    # model = SentenceTransformer('./resume_job_sbert_model')
+    model = SentenceTransformer('Leo1212/longformer-base-4096-sentence-transformers-all-nli-stsb-quora-nq')
     return model
 
 # --- MAIN APP ---
