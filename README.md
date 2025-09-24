@@ -63,7 +63,7 @@ we are using an already good working S-BERT model for inference and vector embed
 ### What this POC does NOT include:
 * User accounts or a database.
 * A hybrid recommendation system (it only uses content-based semantic matching).
-* The Fair Allocation Module.
+* The Fair Allocation Module.(partially implemented for the POC)
 * A scalable, production-ready architecture.
 
 ---
