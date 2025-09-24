@@ -75,6 +75,7 @@ we are using an already good working S-BERT model for inference and vector embed
 ### Prerequisites
 * Python 3.9 or higher installed.
 * `pip` and `venv` installed.
+* you might get some error if your system doesnt meet some requirements.. it is reccemended to use a gpu with atleast 4gb vram or equivalent iGPU and a considerably powerful CPU
 
 ### Installation & Usage
 
