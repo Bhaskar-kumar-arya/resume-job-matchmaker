@@ -8,6 +8,8 @@ This project showcases the power of semantic search to move beyond keywords and 
 
 ![Screenshot of Resume Job Matcher](images/Resume-Job_Matcher_01.png)
 
+[Click here to see complete implementation plan](https://docs.google.com/document/d/1gIHepHXndfihwbHj3PEIpQNwNvi_LDJ7T0cFRwoNRbA/edit?usp=sharing)
+
 ---
 
 ## Table of Contents
