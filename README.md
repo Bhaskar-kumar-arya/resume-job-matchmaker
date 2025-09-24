@@ -134,18 +134,18 @@ This is why the model knows that "customer churn" and "customer attrition" are n
 
 ## Future Roadmap
 This POC is the first step. The path to the full solution includes:
-**Phase 1: Full UI/UX Development:** Build out the three dedicated portals for Candidates, Companies, and Administrators. : 
-* Candidate Portal: A user-centric dashboard where candidates can build profiles, receive personalized internship recommendations with a clear "Match Score," and use an   "Explain this Match" feature for transparency. Advanced filters for location, stipend, and sector will empower candidates to make informed choices.
-* Company Portal: An efficient tool for HR managers to post opportunities and receive an AI-powered, ranked list of the most suitable candidates. The portal will include match explanations and workflow management tools to streamline the hiring process.
-* Administrator Portal: A strategic dashboard for government officials to monitor Key Performance Indicators (KPIs) in real-time. It will feature dedicated analytics to track the distribution of internships across demographic groups and regions, ensuring national policy goals are met.
-**Phase 2: Hybrid Recommendation Engine:** Integrate collaborative filtering to provide "people like you also applied for..." recommendations. : 
-* Collaborative Filtering: By analyzing the application history of the entire user community, this layer will identify latent patterns. It will enable "people like you also applied for..." recommendations, helping candidates discover novel and serendipitous opportunities they might have otherwise missed.
-* Match Score = Summation (aScore_Content + (1-a)Score_Collaborative)
-**Phase 3: Fair Allocation Module:** Implement the constrained optimization layer to ensure policy adherence for regional and demographic quotas. : 
-* Affirmative Action: Ensuring that the number of positions allocated to candidates from protected groups (SC, ST, OBC, PwD) meets or exceeds government-defined quotas.
-* Regional Equity: Enforcing targets for the distribution of internships across all states and aspirational districts to prevent geographic imbalances and promote balanced national development
-* Industry Capacity: Guaranteeing that no company is allocated more interns than its stated capacity for a given role.
-**Phase 4: Scalable Deployment:** Architect the system on a cloud platform (AWS/Azure/GCP) using a microservices architecture for national-level scale. : 
-* Cloud Architecture: Architecting the entire system on a major cloud platform (like AWS, Azure, or GCP) using a microservices architecture. This will ensure high availability, fault tolerance, and the ability to handle millions of users.
-* Containerization: Using technologies like Docker and Kubernetes to manage and orchestrate the various services, allowing for seamless scaling and updates.
-* MLOps Pipeline: Implementing a comprehensive Machine Learning Operations (MLOps) pipeline for continuous model monitoring, evaluation, and retraining. This ensures the AI models remain accurate and adapt to new data and trends over time without manual intervention.
+1. **Phase 1: Full UI/UX Development:** Build out the three dedicated portals for Candidates, Companies, and Administrators. : 
+    * Candidate Portal: A user-centric dashboard where candidates can build profiles, receive personalized internship recommendations with a clear "Match Score," and use an   "Explain this Match" feature for transparency. Advanced filters for location, stipend, and sector will empower candidates to make informed choices.
+    * Company Portal: An efficient tool for HR managers to post opportunities and receive an AI-powered, ranked list of the most suitable candidates. The portal will include match explanations and workflow management tools to streamline the hiring process.
+    * Administrator Portal: A strategic dashboard for government officials to monitor Key Performance Indicators (KPIs) in real-time. It will feature dedicated analytics to track the distribution of internships across demographic groups and regions, ensuring national policy goals are met.
+2. **Phase 2: Hybrid Recommendation Engine:** Integrate collaborative filtering to provide "people like you also applied for..." recommendations. : 
+    * Collaborative Filtering: By analyzing the application history of the entire user community, this layer will identify latent patterns. It will enable "people like you also applied for..." recommendations, helping candidates discover novel and serendipitous opportunities they might have otherwise missed.
+    * Match Score = Summation (aScore_Content + (1-a)Score_Collaborative)
+3. **Phase 3: Fair Allocation Module:** Implement the constrained optimization layer to ensure policy adherence for regional and demographic quotas. : 
+    * Affirmative Action: Ensuring that the number of positions allocated to candidates from protected groups (SC, ST, OBC, PwD) meets or exceeds government-defined quotas.
+    * Regional Equity: Enforcing targets for the distribution of internships across all states and aspirational districts to prevent geographic imbalances and promote balanced national development
+    * Industry Capacity: Guaranteeing that no company is allocated more interns than its stated capacity for a given role.
+4. **Phase 4: Scalable Deployment:** Architect the system on a cloud platform (AWS/Azure/GCP) using a microservices architecture for national-level scale. : 
+    * Cloud Architecture: Architecting the entire system on a major cloud platform (like AWS, Azure, or GCP) using a microservices architecture. This will ensure high availability, fault tolerance, and the ability to handle millions of users.
+    * Containerization: Using technologies like Docker and Kubernetes to manage and orchestrate the various services, allowing for seamless scaling and updates.
+    * MLOps Pipeline: Implementing a comprehensive Machine Learning Operations (MLOps) pipeline for continuous model monitoring, evaluation, and retraining. This ensures the AI models remain accurate and adapt to new data and trends over time without manual intervention.
