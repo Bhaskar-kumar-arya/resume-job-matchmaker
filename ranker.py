@@ -24,6 +24,12 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 import os
 
+if torch.cuda.is_available():
+    print(f"✅ GPU is available and ready to use!")
+    print(f"GPU Name: {torch.cuda.get_device_name(0)}")
+else:
+    print("❌ GPU not found. PyTorch will use the CPU.")
+
     # --- CONSTANTS ---
 # The path where the model will be stored/loaded from.
 MODEL_PATH = 'Leo1212/longformer-base-4096-sentence-transformers-all-nli-stsb-quora-nq'
@@ -84,6 +90,7 @@ def find_top_matches(df, top_n, model):
     df.dropna(subset=['resume_text', 'job_description_text'], inplace=True)
 
     # 1. Prepare unique data pools to avoid redundant computations
+    print("dropping duplicates")
     unique_resumes = df['resume_text'].drop_duplicates().tolist()
     unique_jobs = df['job_description_text'].drop_duplicates().tolist()
 
@@ -171,6 +178,7 @@ def main():
                 st.error("Error: CSV must contain 'resume_text' and 'job_description_text' columns.")
             else:
                 with st.spinner("Processing your file and finding the best matches..."):
+                    print("starting to find top matches")
                     match_results = find_top_matches(df, top_n, model)
 
                 st.success(f"✅ Matching complete! Found results for {len(match_results)} unique jobs.")

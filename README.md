@@ -104,7 +104,7 @@ we are using an already good working S-BERT model for inference and vector embed
 4. **Setup the model** : 
     * either use the pretrained model in `app_pretrained.py` or download the trained model from [Model](https://drive.google.com/drive/folders/1Rszkb9WspvTuhaCbLZDZfceFEXi0nUE2?usp=sharing) and run the app.py with streamlit instead.
 
-5. **Run the Streamlit application : (use may try the sample `train.csv` file for this when app opens)** 
+5. **Run the Streamlit application : (use may try the sample `text.csv` file for this when app opens)** 
     ```bash
     streamlit run ranker.py
     ```
