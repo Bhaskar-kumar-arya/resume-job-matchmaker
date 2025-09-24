@@ -49,9 +49,9 @@ we are using an already good working S-BERT model for inference and vector embed
 ### What this POC does:
 * Provides a simple web interface using **Streamlit**.
 * Takes raw text from a resume and a job description as input.
-* Uses a trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings.
+* Uses a pre-trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings(although this interface doesnt use our main algorithm like the ranker.py).
 * Calculates and displays a **semantic similarity score** that represents the true alignment between the two texts.
-* it also has another script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top 5 resume for each job description.
+* it also has another (main) script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top 5 resume for each job description.
 
 ### What this POC does NOT include:
 * User accounts or a database.
@@ -104,7 +104,7 @@ we are using an already good working S-BERT model for inference and vector embed
 4. **Setup the model** : 
     * either use the pretrained model in `app_pretrained.py` or download the trained model from [Model](https://drive.google.com/drive/folders/1Rszkb9WspvTuhaCbLZDZfceFEXi0nUE2?usp=sharing) and run the app.py with streamlit instead.
 
-5. **Run the Streamlit application : (use may try the sample `test.csv` file for this when app opens)** 
+5. **Run the Streamlit application : (use may try the sample `train.csv` file for this when app opens)** 
     ```bash
     streamlit run ranker.py
     ```
