@@ -102,14 +102,12 @@ we are using an already good working S-BERT model for inference and vector embed
     pip install -r requirements.txt
     ```
 
-4. **Setup the model** : 
-    * either use the pretrained model in `app_pretrained.py` or download the trained model from [Model](https://drive.google.com/drive/folders/1Rszkb9WspvTuhaCbLZDZfceFEXi0nUE2?usp=sharing) and run the app.py with streamlit instead.
 
-5. **Run the Streamlit application : (use may try the sample `text.csv` file for this when app opens)** 
+4. **Run the Streamlit application : (use may try the sample `text.csv` file for this when app opens)** 
     ```bash
     streamlit run ranker.py
     ```
-6.  **you can also manually give resume and job description to see match score individually through this script: (although the percentage isnt much relevant as compared to the ranker script .. this doesnt work as good as the ranker):**
+5.  **you can also manually give resume and job description to see match score individually through this script: (although the percentage isnt much relevant as compared to the ranker script .. this doesnt work as good as the ranker):**
     ```bash
     streamlit run app.py
     ```
