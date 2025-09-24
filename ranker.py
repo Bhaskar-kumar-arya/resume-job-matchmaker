@@ -65,6 +65,7 @@ def load_model():
     """
     try:
         model = SentenceTransformer(MODEL_PATH)
+        model.max_seq_length = 1024
         return model
     except Exception as e:
         st.error(f"Error loading the model from '{MODEL_PATH}'. Ensure the model exists and is compatible. Error: {e}")

@@ -4,6 +4,8 @@ A Proof of Concept demonstrating an AI-powered engine to intelligently match can
 
 This project showcases the power of semantic search to move beyond keywords and understand the true contextual alignment between a candidate's experience and an internship's requirements.
 
+![Screenshot of Resume Job Matcher](images/Resume-Job_Matcher_01.png)
+
 ---
 
 ## Table of Contents
@@ -76,7 +78,7 @@ we are using an already good working S-BERT model for inference and vector embed
 * Python 3.9 or higher installed.
 * `pip` and `venv` installed.
 * you might get some error if your system doesnt meet some requirements.. it is reccemended to use a gpu with atleast 4gb vram or equivalent iGPU and a considerably powerful CPU
-
+* if you are using gpu , make sure CUDA >= 12.9 is supported and installed
 ### Installation & Usage
 
 1.  **Clone the repository:**
