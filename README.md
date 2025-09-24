@@ -88,7 +88,7 @@ we are using an already good working S-BERT model for inference and vector embed
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Bhaskar-kumar-arya/resume-job-matchmaker.git](https://github.com/Bhaskar-kumar-arya/resume-job-matchmaker.git)
+    git clone https://github.com/Bhaskar-kumar-arya/resume-job-matchmaker.git
     cd your-repo-name
     ```
 
