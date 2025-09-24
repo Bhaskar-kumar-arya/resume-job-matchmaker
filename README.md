@@ -4,7 +4,7 @@ A Proof of Concept demonstrating an AI-powered engine to intelligently match can
 
 This project showcases the power of semantic search to move beyond keywords and understand the true contextual alignment between a candidate's experience and an internship's requirements.
 
-[View Sample result](images/Resume-Job%20Matcher_sample.pdf)
+[View Sample pdf](images/Resume-Job%20Matcher_sample.pdf)
 
 ![Screenshot of Resume Job Matcher](images/Resume-Job_Matcher_01.png)
 
