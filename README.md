@@ -58,6 +58,7 @@ we are using an already good working S-BERT model for inference and vector embed
 * Uses a pre-trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings(although this interface doesnt use our main algorithm like the ranker.py).
 * Calculates and displays a **semantic similarity score** that represents the true alignment between the two texts.
 * it also has another (main) script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top 5 resume for each job description.
+* the ranker also considers the caste. it gives certain boost to people belonging to a lower caste. we randomize it with some paramaters for now
 
 ### What this POC does NOT include:
 * User accounts or a database.

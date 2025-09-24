@@ -210,15 +210,15 @@ def main():
             caste_ratio = st.slider(
                 "Lower Caste Ratio (%)",
                 min_value=0,
-                max_value=100,
-                value=50,
+                max_value=30,
+                value=25,
                 help="The percentage of resumes that will be randomly assigned 'lower caste' status."
             )
             boost_percentage = st.slider(
                 "Score Boost (%)",
                 min_value=0.0,
-                max_value=1.5,
-                value=0.8,
+                max_value=1,
+                value=0.6,
                 step=0.1,
                 help="The percentage boost to apply to the scores of 'lower caste' resumes."
             )
