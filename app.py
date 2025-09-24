@@ -4,14 +4,7 @@
 # semantic matching between a resume and a job description. It uses a
 # pre-trained Sentence-BERT model from the Hugging Face library to generate
 # embeddings and calculate a contextual similarity score.
-#
-# To Run:
-# 1. Make sure you have the required libraries installed:
-#    pip install streamlit sentence-transformers torch
-# 2. Save this code as 'app.py'.
-# 3. Open a terminal in the same directory and run the command:
-#    streamlit run app.py
-# -----------------------------------------------------------------------------
+
 
 import streamlit as st
 from sentence_transformers import SentenceTransformer, util

@@ -6,17 +6,7 @@
     # between jobs and resumes from an uploaded CSV file. It identifies unique job
     # descriptions and resumes, calculates their semantic similarity using a
     # SentenceTransformer model, and displays the top N matching resumes for each job.
-    #
-    # Author: Gemini
-    # Date: 23 September 2025
-    #
-    # To Run:
-    # 1. Ensure required libraries are installed:
-    #    pip install streamlit pandas sentence-transformers torch
-    # 2. Save this script as a Python file (e.g., `resume_matcher_app.py`).
-    # 3. Run the command from your terminal:
-    #    streamlit run resume_matcher_app.py
-    # -----------------------------------------------------------------------------
+
 
 import streamlit as st
 import pandas as pd
