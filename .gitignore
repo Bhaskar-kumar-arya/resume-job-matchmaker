@@ -15,3 +15,6 @@ data/
 tester.py 
 
 .vscode/
+
+BiEncoder_trainer.py
+BiEncoder_trainer_kaggle.py

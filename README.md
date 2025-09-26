@@ -38,7 +38,7 @@ The root cause is a systemic **"Great Mismatch"** stemming from:
 ## The Proposed Solution
 The ultimate goal is to build an **AI-Based Smart Allocation Engine**—an intelligent marketplace that addresses these challenges through three core pillars:
 
-1.  **Semantic Matching with NLP:** An advanced Natural Language Processing (NLP) module performs deep semantic analysis of resumes and internship descriptions, moving beyond keywords to understand the true context of skills and responsibilities.
+1.  **Semantic Matching with NLP:** An advanced Natural Language Processing (NLP) module performs deep semantic analysis of resumes and internship descriptions, moving beyond keywords to understand the true context of skills and responsibilities.we will use a Bi-encoder model to generate embeddings and get top N matches for each Job description , then a Cross-Encoder model to then reRank the mapped resume of each Job description for a much better accuracy.
 2.  **Hybrid Recommendation Engine:** A combination of content-based and collaborative filtering techniques generates a multi-factor "Match Score" for each candidate-internship pair.
 3.  **Fair Allocation Module:** A constrained optimization framework ensures equitable distribution of opportunities across all states, districts, and social categories, aligning with national policy goals.
 
@@ -55,7 +55,7 @@ we are using an already good working S-BERT model for inference and vector embed
 ### What this POC does:
 * Provides a simple web interface using **Streamlit**.
 * Takes raw text from a resume and a job description as input.
-* Uses a pre-trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings(although this interface doesnt use our main algorithm like the ranker.py).
+* Uses a pre-trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings(although this interface doesnt use our main algorithm like the ranker.py). and a Cross-Encoder to rerank the resumes after matching.
 * Calculates and displays a **semantic similarity score** that represents the true alignment between the two texts.
 * it also has another (main) script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top 5 resume for each job description.
 * the ranker also considers the caste. it gives certain boost to people belonging to a lower caste. we randomize it with some paramaters for now
