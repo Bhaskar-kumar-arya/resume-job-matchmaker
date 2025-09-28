@@ -23,7 +23,9 @@ import random
 
 # --- CONSTANTS ---
 # Using the existing model path for the bi-encoder
-BI_ENCODER_MODEL_PATH = 'Leo1212/longformer-base-4096-sentence-transformers-all-nli-stsb-quora-nq'
+# BI_ENCODER_MODEL_PATH = 'Leo1212/longformer-base-4096-sentence-transformers-all-nli-stsb-quora-nq'
+BI_ENCODER_MODEL_PATH = './triplet/resume-matcher-longformer'
+
 # Define the cross-encoder model name
 CROSS_ENCODER_MODEL_NAME = "mixedbread-ai/mxbai-rerank-large-v2"
 

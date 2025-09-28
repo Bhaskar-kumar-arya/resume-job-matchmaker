@@ -50,14 +50,15 @@ The ultimate goal is to build an **AI-Based Smart Allocation Engine**—an intel
 This repository contains a lightweight, functional Proof of Concept. **It is not the final, full-scale application.**
 
 The purpose of this POC is to demonstrate the feasibility and power of the most critical component: **the Semantic Matching Engine**.
-we are using an already good working S-BERT model for inference and vector embeddings generation. we will fine tune the model furthur for our needs later. 
+we have finetuned a S-BERT model for inference and vector embeddings generation.we used a triplet loss function, with Job Descriptions as the anchor, and one positive and one negative resume for it.Though we are working on furthur using a custom quadruplet loss func for the model to better understand nuances of different resumes. 
+
 
 ### What this POC does:
 * Provides a simple web interface using **Streamlit**.
 * Takes raw text from a resume and a job description as input.
-* Uses a pre-trained **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings(although this interface doesnt use our main algorithm like the ranker.py). and a Cross-Encoder to rerank the resumes after matching.
+* Uses a finetuned **Sentence-BERT (S-BERT)** model to convert the texts into contextual vector embeddings(although this interface doesnt use our main algorithm like the ranker.py). and a Cross-Encoder to rerank the resumes after matching.
 * Calculates and displays a **semantic similarity score** that represents the true alignment between the two texts.
-* it also has another (main) script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top 5 resume for each job description.
+* it also has another (main) script `ranker.py` , which takes a csv with different resumes and job descriptions , and matches top N resume for each job description.
 * the ranker also considers the caste. it gives certain boost to people belonging to a lower caste. we randomize it with some paramaters for now
 
 ### What this POC does NOT include:
@@ -84,6 +85,7 @@ we are using an already good working S-BERT model for inference and vector embed
 * `pip` and `venv` installed.
 * you might get some error if your system doesnt meet some requirements.. it is reccemended to use a gpu with atleast 4gb vram or equivalent iGPU and a considerably powerful CPU
 * if you are using gpu , make sure CUDA >= 12.9 is supported and installed
+* download our trained model [Model](https://drive.google.com/drive/folders/1h8BxT-XhyegfRkXebWAu6r5Rhz69rxdj?usp=sharing) for better results , or set BI_ENCODER_MODEL_PATH in `ranker.py` to `Leo1212/longformer-base-4096-sentence-transformers-all-nli-stsb-quora-nq`
 ### Installation & Usage
 
 1.  **Clone the repository:**

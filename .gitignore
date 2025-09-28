@@ -6,7 +6,6 @@ __pycache__/
 # Streamlit
 .streamlit/
 
-resume_job_sbert_model/
 
 venv/
 
@@ -16,5 +15,11 @@ tester.py
 
 .vscode/
 
+resume-matcher-longformer
+
 BiEncoder_trainer.py
 BiEncoder_trainer_kaggle.py
+
+BiEncoder_trainer_kaggle_quadruplet.py
+quadruplet.py
+triplet.py
