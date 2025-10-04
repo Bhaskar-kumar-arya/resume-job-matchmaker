@@ -23,7 +23,8 @@ st.set_page_config(
 def load_model():
     """Loads the Sentence-BERT model from Hugging Face."""
     # model = SentenceTransformer('./resume_job_sbert_model')
-    model = SentenceTransformer('./triplet/resume-matcher-longformer')
+    model = SentenceTransformer('./sbert_jd_resume_matcher_cosine_loss')
+    model.max_seq_length = 1024
     return model
 
 # --- MAIN APP ---
